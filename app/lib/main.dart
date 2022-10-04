@@ -9,14 +9,14 @@ import 'package:flutter/services.dart'
 import 'package:flutter_document_reader_api/document_reader.dart';
 import 'package:image_picker/image_picker.dart';
 
-void main() => runApp(MyApp());
+void main() => runApp(ScannerView());
 
-class MyApp extends StatefulWidget {
+class ScannerView extends StatefulWidget {
   @override
-  _MyAppState createState() => _MyAppState();
+  _ScannerViewState createState() => _ScannerViewState();
 }
 
-class _MyAppState extends State<MyApp> {
+class _ScannerViewState extends State<ScannerView> {
   Future<List<String>> getImages() async {
     setStatus("Processing image...");
     List<XFile> files = await ImagePicker().pickMultiImage();
